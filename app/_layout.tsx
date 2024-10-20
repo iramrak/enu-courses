@@ -13,6 +13,16 @@ export default function _layout() {
         name='home'
         options={{ headerShown: false }}
         />
+
+        <Stack.Screen 
+        name='python'
+        options={{ headerShown: false }}
+        />
+
+        <Stack.Screen 
+        name='html'
+        options={{ headerShown: false }}
+        />
     </Stack>
   )
 }

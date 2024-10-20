@@ -29,7 +29,7 @@ export default function index() {
             <Text className='text-center text-xl tracking-[1.3px] leading-7 w-[87%] mt-[50px] mx-auto text-black font-semibold'>
                 Учись с EnuCourses: выйбирай сложные темы, приходи тесты и проверяй свой знания!🔥
             </Text>
-            <Link href='/home' asChild> 
+            <Link href='./home/' asChild> 
               <TouchableOpacity className='w-[90%] mx-auto my-7 h-[70px] rounded-2xl bg-primary'>
                 <Text className='m-auto text-2xl font-bold text-white tracking-[0.6px]'>Перейти</Text>
               </TouchableOpacity> 
