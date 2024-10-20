@@ -41,21 +41,27 @@ export default function index() {
     return (
 
     <>
-      <View className='mt-16 mx-[10px] w-[350px] h-[350px] bg-primary m-auto rounded-xl'>
+      <View className='mt-16 mx-[10px] w-[350px] h-[350px] bg-[#295DE3] m-auto rounded-xl'>
         <Text className='text-2xl text-white font-bold text-center mt-[30%]'>
           Ваш результат:
         </Text>
         <Text className='text-2xl text-white font-bold text-center mt-3'>{score} из {QUESTIONS.length}</Text>
        
       </View>
-     <Pressable className='p-4 w-[90%] h-[65px] mx-auto my-20 bg-primary rounded-lg' onPress={() => {
+      <View className='mb-12'>
+      <Pressable className='p-4 w-[90%] h-[65px] mx-auto mt-16 mb-2 bg-[#295DE3] rounded-lg' onPress={() => {
           // Перезапускаем тест
           setShowScore(false);
           setCurrentQuestionIndex(0);
           setScore(0);
         }}>
           <Text className='text-center text-white font-bold text-2xl'>Дальше</Text>
-        </Pressable>
+      </Pressable>
+      <Link href={'../(app)'} asChild>
+          <Text className='mx-auto  text-primary font-semivold text-xl'>Назад в главное меню</Text>
+      </Link>
+      </View>
+
     </>
    
       
@@ -68,7 +74,7 @@ export default function index() {
         <Link href={'../(app)'} asChild className='mb-5'>
           <Ionicons name="chevron-back-sharp" size={24} color="black"/>
         </Link>
-        <View className='w-[100%] h-[350px] bg-primary rounded-xl flex items-center justify-center'>
+        <View className='w-[100%] h-[350px] bg-[#295DE3] rounded-xl flex items-center justify-center'>
           <Text className='text-white font-semibold text-2xl mb-4 w-[80%] text-center'>
             {QUESTIONS[currentQuestionIndex].question}
           </Text>
@@ -85,8 +91,8 @@ export default function index() {
           <Pressable
             key={option.id}
             style={[
-              tw`p-5 bg-primary mt-2 rounded-lg`,
-              selectedOption === option ? (isCorrect ? tw`bg-green-500` : tw`bg-red-500`) : tw`bg-blue-500`,
+              tw`p-5 bg-[#295DE3] mt-2 rounded-lg`,
+              selectedOption === option ? (isCorrect ? tw`bg-green-500` : tw`bg-red-500`) : tw`bg-[#295DE3]`,
             ]}
             onPress={() => handleOptionPress(option)}
             disabled={!!selectedOption} // Если выбрана опция, блокируем возможность нажимать снова
@@ -96,7 +102,7 @@ export default function index() {
         ))}
       </View>
       <Pressable className='p-4 mt-5 border-primary border-[1px] rounded-lg' onPress={handleNext}>
-        <Text>Next</Text>
+        <Text>Дальше</Text>
       </Pressable>
     </View>
   );
