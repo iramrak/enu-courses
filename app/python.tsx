@@ -24,6 +24,7 @@ export default function python() {
         </Animated.View>
 
         <View className='flex-row items-center gap-1'>
+
           <Animated.View entering={FadeInDown.delay(300).springify()} className='w-[90px] h-[35px] border-[3px] border-[#3D3F3B] rounded-full flex-row items-center justify-center'>
             <FontAwesome name="star" size={24} color="#3D3F3B" />
             <Text className='text-center text-[#3D3F3B] font-bold text-lg tracking-[-0.6px]'>0/10</Text>
@@ -102,13 +103,13 @@ export default function python() {
         resizeMode='stretch'
         />
 
-        <Link href={'./test/pythontest'} asChild>
+        <Link href={'./test/'} asChild>
           <TouchableOpacity className='w-full h-[65px] bg-primary rounded-2xl mt-8 mb-3'>
             <Text className='m-auto text-2xl tracking-wider text-white font-bold'>Перейти к тесту</Text>
           </TouchableOpacity>
         </Link>
 
-        <Link href={'./home'} asChild>
+        <Link href={'./(app)'} asChild>
           <Text className='mx-auto mb-16'>Назад в главное меню</Text>
         </Link>
       </View>

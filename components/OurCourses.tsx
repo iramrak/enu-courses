@@ -16,7 +16,7 @@ const OurCourses = () => {
             horizontal
             showsHorizontalScrollIndicator={false}
             renderItem={({item}) => (
-                <Link href={`./${item.href}`} asChild>
+                <Link href={`../${item.href}`} asChild>
                     <TouchableOpacity className='mr-[10px]'>
                         <Image
                         source={item.image}

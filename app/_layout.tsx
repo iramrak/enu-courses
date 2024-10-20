@@ -10,7 +10,7 @@ export default function _layout() {
         options={{ headerShown: false }} />
 
         <Stack.Screen 
-        name='home'
+        name='(app)'
         options={{ headerShown: false }}
         />
 
@@ -23,6 +23,11 @@ export default function _layout() {
         name='html'
         options={{ headerShown: false }}
         />
+        
+        <Stack.Screen
+        name="test"
+        options={{ headerShown: false }} />
+
     </Stack>
   )
 }
